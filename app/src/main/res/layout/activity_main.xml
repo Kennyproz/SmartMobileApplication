@@ -7,28 +7,58 @@
     tools:context="com.example.ken.smartmobileapplication.MainActivity">
 
     <TextView
+        android:id="@+id/lblText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World Im Kenny!"
-        android:textColor="@android:color/holo_red_light"
-
+        android:text="-"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304" />
+
+    <Button
+        android:id="@+id/btnChangetext"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="clicked"
+        android:text="Change"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextPage"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="230dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Write something here!"
+        android:inputType="textPersonName"
+        app:layout_constraintHorizontal_bias="0.681"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnChangetext"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="96dp"
-        android:layout_height="47dp"
-        android:onClick="clicked"
-        android:text="Button"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
+        android:id="@+id/btnNextPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        app:layout_constraintRight_toRightOf="parent" />
-
-
+        android:layout_marginTop="88dp"
+        android:onClick="showMessage"
+        android:text="Show"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

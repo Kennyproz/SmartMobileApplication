@@ -1,21 +1,37 @@
 package com.example.ken.smartmobileapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    int i = 0;
-
+    public static final String EXTRA_MESSAGE = "com.example.ken.smartmobileapplication.MESSAGE";
     protected void clicked(View view){
-        System.out.println("Op de knop geklikt");
-        System.out.println(i);
-        i++;
+        TextView textView = (TextView)findViewById(R.id.lblText);
+        EditText inputText = (EditText)findViewById(R.id.editText);
+        if (!inputText.getText().toString().isEmpty()){
+            textView.setText(inputText.getText());
+            Toast.makeText(MainActivity.this,"Changed text to: " + inputText.getText(),Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(MainActivity.this,"Input has no text!",Toast.LENGTH_LONG).show();
+        }
     }
 
+    public void showMessage(View view){
+        Intent intent = new Intent(this, SecondActivity.class);
+        EditText editText = (EditText)findViewById(R.id.editText);
+        String textMessage = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE,textMessage);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
