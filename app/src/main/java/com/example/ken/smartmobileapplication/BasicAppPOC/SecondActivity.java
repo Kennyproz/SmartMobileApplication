@@ -1,9 +1,11 @@
-package com.example.ken.smartmobileapplication;
+package com.example.ken.smartmobileapplication.BasicAppPOC;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.example.ken.smartmobileapplication.R;
 
 public class SecondActivity extends AppCompatActivity {
 
