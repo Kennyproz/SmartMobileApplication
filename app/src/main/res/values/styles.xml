@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -10,15 +10,21 @@
 
     <!-- https://material.io/guidelines/style/color.html#color-color-palette -->
     <style name="SuperStyle" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <item name="colorPrimary">#00E676</item>
-        <item name="colorPrimaryDark">#4CAF50</item>
-        <item name="colorAccent">#4E342E</item>
-        <item name="android:button">@style/SuperButton</item>
+        <item name="colorPrimary">#D50000</item>
+        <item name="colorPrimaryDark">#9b0000</item>
+        <item name="colorAccent">#9E9E9E</item>
+        <item name="android:buttonStyle">@style/SuperButton</item>
 
     </style>
     <style name="SuperButton" parent="Base.TextAppearance.AppCompat.Button">
-        <item name="android:radius">40px</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:textColor">#FF0000</item>
+   <!-- <style name="SuperButton" parent="Base.TextAppearance.AppCompat.Button"> -->
+        <item name="android:radius">5dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textAlignment" tools:ignore="NewApi">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">#d50000</item>
+       <!-- <item name="android:backgroundTint" tools:ignore="NewApi">#757575</item> -->
     </style>
 </resources>

@@ -13,7 +13,8 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        tools:ignore="MissingConstraints">
 
         <EditText
             android:id="@+id/tbUsername"
@@ -33,11 +34,19 @@
             android:hint="********"
             android:inputType="textPassword" />
 
+        <CheckBox
+            android:id="@+id/chkCredent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Remember Credentials" />
+
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="login"
             android:text="Login" />
 
         <Button

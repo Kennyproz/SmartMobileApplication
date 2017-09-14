@@ -15,4 +15,6 @@ public class Register extends AppCompatActivity {
         Intent intent = getIntent();
 
     }
+
+
 }
