@@ -17,6 +17,8 @@ import java.util.List;
 public class Register extends AppCompatActivity {
 
     List<User> userList;
+    EditText edUsername, edName, edPass1, edPass2, edEmail;
+    String username, name, pass, pass1, mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,18 +46,8 @@ public class Register extends AppCompatActivity {
         }
     }
     private void addUser(){
-        EditText edUsername = (EditText)findViewById(R.id.editTextUsername);
-        EditText edName = (EditText)findViewById(R.id.editTextName);
-        EditText edPass1 = (EditText)findViewById(R.id.editTextPass);
-        EditText edPass2 = (EditText)findViewById(R.id.editTextpass);
-        EditText edEmail = (EditText)findViewById(R.id.editTextEmail);
-
-        String username = edUsername.getText().toString();
-        String name = edName.getText().toString();
-        String pass = edPass1.getText().toString();
-        String pass1 = edPass2.getText().toString();
-        String mail = edEmail.getText().toString();
-
+        getViewIds();
+        getFilledInText();
         if (pass.equals(pass1) && !pass.isEmpty()){
             if (username.isEmpty() || name.isEmpty() || mail.isEmpty())
             {
@@ -69,6 +61,22 @@ public class Register extends AppCompatActivity {
         else {
             Toast.makeText(Register.this,"Password do not match!!",Toast.LENGTH_LONG).show();
         }
+    }
+
+    private void getViewIds(){
+        edUsername = (EditText)findViewById(R.id.editTextUsername);
+        edName = (EditText)findViewById(R.id.editTextName);
+        edPass1 = (EditText)findViewById(R.id.editTextPass);
+        edPass2 = (EditText)findViewById(R.id.editTextpass);
+        edEmail = (EditText)findViewById(R.id.editTextEmail);
+    }
+
+    private void getFilledInText(){
+        username = edUsername.getText().toString();
+        name = edName.getText().toString();
+        pass = edPass1.getText().toString();
+        pass1 = edPass2.getText().toString();
+        mail = edEmail.getText().toString();
     }
 
 
